@@ -1,0 +1,449 @@
+.banner, .galerias #Guno, .galerias #Gdos, .galerias #Gtres, .caract .caract__primeras #Cuno, .caract .caract__primeras #Cdos, .caract .caract__segundas #Ctres {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.galerias #Guno:hover, .galerias #Gdos:hover, .galerias #Gtres:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-size: 120%;
+}
+
+.galerias .galeria__especifica {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-size: 100%;
+  opacity: 1;
+}
+
+header ul, .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.galerias, .caract .caract__primeras, .final, .final .final__redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.titulo {
+  font-size: 40px;
+  margin: 69.9px;
+  margin-left: 50px;
+}
+
+#primero {
+  padding-top: 20px;
+}
+
+header {
+  background-color: black;
+  padding: 15px 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+}
+
+header ul {
+  margin: 10px 7% 10px 0;
+}
+
+header ul li {
+  margin-right: 50px;
+  opacity: .8;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+header ul li:hover {
+  opacity: 1;
+}
+
+.cuerpo {
+  position: relative;
+  top: 1000px;
+  background-color: white;
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  padding: 13.4% 10%;
+  width: 80%;
+  background-image: url(https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+
+.banner .banner__texto__titulo {
+  color: white;
+  font-size: 110px;
+  text-align: right;
+}
+
+.banner .banner__texto__descripcion {
+  margin-top: 15px;
+  margin-bottom: 45px;
+  font-size: 45px;
+  color: white;
+  text-align: right;
+}
+
+.banner .banner__texto__boton {
+  color: white;
+  border: 1px solid white;
+  margin-left: 48%;
+  padding: 20px 0 20px 75px;
+  font-size: 30px;
+}
+
+.banner .banner__texto__boton:hover {
+  -webkit-transition: .8s;
+  transition: .8s;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.galerias {
+  padding: 0 100px;
+  margin: 0 170px;
+}
+
+.galerias .galeria__especifica {
+  padding: 15% 13% 1%;
+  margin: 70px;
+}
+
+.galerias .galeria__especifica .galeria__especifica__boton {
+  padding: 10px 15px;
+  background: white;
+  color: black;
+}
+
+.galerias .galeria__especifica .galeria__especifica__boton:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.galerias #Guno {
+  background-image: url(https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: 100%;
+}
+
+.galerias #Gdos {
+  background-image: url(https://images.pexels.com/photos/1702/bow-tie-businessman-fashion-man.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: 100%;
+}
+
+.galerias #Gtres {
+  background-image: url(https://images.pexels.com/photos/539848/pexels-photo-539848.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: 100%;
+}
+
+.promociones {
+  /*opacity: 0.0;
+    transition: 1sg;
+    opacity: 1;*/
+  width: 100%;
+  margin: 0;
+  padding: 9% 0;
+  background-image: url(/imgs/previas/banner_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: #d0ced1;
+    background-position: right;
+    background-size: contain;
+
+    .promociones__titulo {
+        font-weight: 700;
+        font-size: 80px;
+        margin: 139.8px 50px;
+    } */
+}
+
+.caract {
+  font-weight: bold;
+}
+
+.caract .caract__especifica {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.caract .caract__especifica__text {
+  padding: 40px 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 35px;
+}
+
+.caract .caract__primeras {
+  margin: 10% 5%;
+}
+
+.caract .caract__primeras #Cuno {
+  background-image: url(https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+
+.caract .caract__primeras #Cdos {
+  background-image: url(https://images.pexels.com/photos/1042140/pexels-photo-1042140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+
+.caract .caract__segundas .caract__especifica {
+  width: 100%;
+  height: 790px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.caract .caract__segundas .caract__especifica__text {
+  width: 35%;
+  font-size: 80px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.caract .caract__segundas .esp__fondo {
+  padding: 0 45px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 41.1%;
+}
+
+.caract .caract__segundas .esp__fondo .esp__boton {
+  color: white;
+  padding: 10px 90px;
+  margin: 40px 61% 30px 0;
+}
+
+.caract .caract__segundas .esp__fondo .esp__boton:hover {
+  color: black;
+}
+
+.caract .caract__segundas .esp__parf {
+  margin: 0;
+  padding: 0 45px;
+  width: 41.1%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.caract .caract__segundas #Ctres {
+  background-color: #e8e8e8;
+  background-image: url(https://images.pexels.com/photos/157675/fashion-men-s-individuality-black-and-white-157675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: contain;
+  background-position: right;
+}
+
+.newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 70px 0;
+}
+
+.newsletter .newsletter__parrafo {
+  margin: 0 70px;
+  font-size: 25px;
+}
+
+.newsletter .newsletter__func {
+  margin: 0 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newsletter .newsletter__func .newsletter__func__bloque {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600px;
+}
+
+.newsletter .newsletter__func .newsletter__func__bloque .newsletter__func__bloque__email {
+  height: 30px;
+  margin: 0 5px 5px 0;
+  font-size: 15px;
+  border-color: #000000;
+  padding: 5px 15px;
+}
+
+.newsletter .newsletter__func .newsletter__func__bloque .newsletter__func__bloque__check {
+  padding-right: 50px;
+}
+
+.newsletter .newsletter__func .newsletter__func__boton {
+  height: 30px;
+  padding: 12px 15px 4px;
+  background: black;
+  color: white;
+  margin-left: 20px;
+}
+
+.newsletter .newsletter__func .newsletter__func__boton:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 70px 20px;
+}
+
+img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.final .final__contac {
+  margin-top: 10px;
+  margin-right: 270%;
+}
+
+.final .final__redes {
+  margin-top: 10px;
+}
+
+.esp__fondo {
+  padding: 0 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.esp__fondo .esp__boton {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 70px;
+  margin: 40px 46% 30px 0;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.esp__fondo .esp__boton:hover {
+  -webkit-transition: .8s;
+  transition: .8s;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.esp__parf {
+  padding: 0 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* header{
+        background-color: red;
+    }*/
+  .banner {
+    top: 50px;
+  }
+  .cuerpo {
+    top: 750px;
+  }
+  .galerias {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .galerias .galeria__especifica {
+    padding: 40% 20% 5%;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+  .galerias .galeria__especifica .galeria__especifica__boton {
+    padding: 4% 40%;
+    font-size: 20px;
+  }
+  /* #Ctres {
+       .caract__especifica__text{
+           flex-direction: column;
+           font-size: 60px;
+           padding-top: 0;
+           margin: 0;
+           background-color: red;
+       }
+    }*/
+  .newsletter .newsletter__parrafo {
+    font-size: 22px;
+  }
+  .newsletter .newsletter__func .newsletter__func__bloque {
+    width: 200px;
+  }
+  .newsletter .newsletter__func .newsletter__func__bloque .newsletter__func__bloque__check {
+    padding-right: 50px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

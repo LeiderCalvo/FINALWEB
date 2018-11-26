@@ -1,0 +1,203 @@
+%btn{
+    background: black;
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 80%;
+        font-weight: 200;
+        width: 20%;
+        padding: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+
+        &:hover{
+            background: white;
+            color: black;
+        }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+}
+
+.cuerpo{ 
+    width: 65%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cuerpo__izq{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .prueba{
+            width: 100%;
+            overflow: auto;
+
+        .cuerpo__izq__item{
+            width: 95%;
+            margin-right: 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4% 2% 3% 2%;
+            border-bottom: 1px solid black;
+
+            .cuerpo__izq__item__img{
+                border: 1px solid black;
+            }
+
+            h6{
+                font-weight: 400;
+            }
+
+            .color{
+                border: 1px solid black;
+                padding: 1.5%;
+            }
+
+            .talla{
+                border: 1px solid black;
+                padding: 1.5%;
+            }
+        }
+    }
+    }
+}
+
+.final{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .btnVaciar{
+        @extend %btn;
+    }
+
+    .total{
+        @extend %btn;
+    }
+
+    .btnVolver{
+        @extend %btn;
+    }
+}
+
+.cuerpo__der{
+    height: 78%;
+    width: 25%;
+    background-color: black;
+    color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 15%;
+    }
+
+    .form{
+        width: 100%;
+        *{
+            margin-bottom: 5%;
+        }
+
+        .form__hor{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            .form__hor__ver{
+                width: 50%;
+                input{
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    .terms{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        .condiciones{
+            width:3%;
+        }
+
+        .ter{
+            width:35%;
+        }
+    }
+
+    h2{
+        width: 100%;
+        margin-top: 2%;
+        font-weight: 500;
+        margin-bottom: 25%;
+        align-self: left;
+    }
+        
+    h5{
+        font-weight: 300;
+        margin-bottom: 8%;
+    }
+
+    input{
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        width: 100%;
+        margin-bottom: 9%;
+        color: grey;
+    }
+
+    .btn{
+        background: white;
+        color: black;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 80%;
+        font-weight: 200;
+        padding: 2%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+
+        &:hover{
+            background: black;
+            border: 1px solid white;
+            color: white;
+        }
+    }
+}

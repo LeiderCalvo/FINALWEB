@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Descripción</title>
+    <link rel="stylesheet" href="/Styles/descripcion.css" />
+</head>
+<body>
+    {{#each producto}}
+        <h6 class="titulo">{{Titulo}}</h6>
+        <div class="cuerpo">
+            <div class="cuerpo__izq">
+                <img src="{{imagen}}" alt="">
+                <div class="cuerpo__izq__elementos">
+                    <h3>DESCRIPCION</h3>
+                    <p>{{descripcion}}</p>
+                    <h2>$ {{Precio}}</h2>
+                    <div class="cuerpo__izq__elementos__selecTallas"></div>
+                    <div class="cuerpo__izq__elementos__selecColor"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="cuerpo__der">
+            </div>
+        </div>
+        <div class="btn">
+            <div data-Titulo="{{Titulo}}" class="btn__AgregarYvolver">AÑADIR AL CARRITO</div>
+            <div data-Titulo="{{Titulo}}" class="btn__AgregarYcomprar">COMPRAR</div>
+            <div class="btn__volver">VOLVER</div>
+        </div>
+    {{/each}}
+
+    <script src="/Scripts/descripcion.js"></script>
+</body>
+</html>

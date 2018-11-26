@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boutique Lilì Hombres</title>
+    <!-- Tipografía que estoy usando -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500|Roboto+Condensed" rel="stylesheet">
+    <!-- Llamar la hoja de estilos-->
+    <link rel="stylesheet" href="/Styles/main.css" />
+</head>
+<body>
+    <header>
+        <img src="/imgs/menu.png" width="3%" style="margin: 1% 2%">
+        <nav>
+            <ul>
+                <li><a href="/" method="GET">HOME</a></li>
+                <li><a href="/tiendageneral" method="GET">TIENDA</a></li>
+                <li><a href="#">LOCALES</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h6 class="titulo">{{titulo}}</h6>
+    <div class="flotante">
+        <div class="carrito"></div>
+        <div class="camisetas"></div>
+        <div class="camisas"></div>
+        <div class="pantalones"></div>
+    </div>
+
+    <div class="filtros">
+        <div class="filtros__talla">
+            <div class="talla">XS</div>
+            <div class="talla">S</div>
+            <div class="talla">M</div>
+            <div class="talla">L</div>
+            <div class="talla">XL</div>
+        </div>
+        <div class="filtros__color">
+
+        </div>
+    </div>
+
+    <div class="cuerpo">
+        <div class="prods">
+            {{#each productos}}
+                <div class="productos">
+                    <img src="{{imagen}}" alt="" class="productos__img">
+                    <h6 class="productos__titulo">{{Titulo}}</h6>
+                    <div class="productos__action">
+                        <h3 class="productos__action__precio">$ {{Precio}}</h3>
+                        <div class="productos__action__boton" id="{{@index}}">VER DETALLE</div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="verMas">
+        <a href="/tiendageneral" style="color: black">VER MAS</a>
+    </div>
+
+    <footer>
+            <p>Derechos Reservados</p>
+            <p>@COPYRIGHT</p>
+
+            <span class="final">
+                <p class="final__contac">CONTACTANOS</p>
+
+                <div class="final__redes">
+                    <img src="/imgs/previas/facebook_1.png" alt="facebook">
+                    <img src="/imgs/previas/instagram_1.png" alt="instagram">
+                    <img src="/imgs/previas/twiter_1.png" alt="twiter">
+                    <img src="/imgs/previas/youtube_1.png" alt="youtube">
+                </div>
+            </span>
+    </footer>
+
+    <!-- javaScript del cliente -->
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>
