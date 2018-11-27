@@ -3,6 +3,12 @@ window.addEventListener('load', function(){
         window.location.href = "/tiendageneral";
     });
 
+    if(document.querySelector('.camisetas') != null && document.querySelector('.camisetas') != undefined){
+        document.querySelector('.camisetas').addEventListener('click', function(){
+            window.location.href = "/interaccion";
+        });
+    }
+
     var elemsCarrito = JSON.parse(localStorage.getItem('carrito'));
     if(elemsCarrito == null){
         elemsCarrito = [];

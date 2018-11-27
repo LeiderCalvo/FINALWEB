@@ -48,10 +48,28 @@ body{
         border-style: solid;
     }
 
-    .cuerpo__der{
+    .camisas{
         width: 100%;
         margin-left: 2%;
         background-image: url('/imgs/promos.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .pantalones{
+        width: 100%;
+        margin-left: 2%;
+        background-image: url('/imgs/promos.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .camisetas{
+        width: 100%;
+        margin-left: 2%;
+        background-color: black;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

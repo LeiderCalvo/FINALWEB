@@ -54,18 +54,18 @@ app.get(`/tiendaTalla`, function(request, response){
     console.log(tit);
     console.log(talla);
     coleccion.find({
-                    Precio: { 
-                         '$eq': 280000,
+                    soy: { 
+                         '$eq': tit.toLowerCase(),
                     },
-                    color:{
-                        '$eq': 'Negro',
+                    tallas:{
+                        '$in': [talla],
                     }
     }).toArray(function(err, docs){
         if(err){
             console.error(err);
             response.send(err);
             return;
-        }        
+        }         
         
         var prod = request.query.producto;
         console.log(prod);
@@ -84,12 +84,10 @@ app.get(`/tiendaTalla`, function(request, response){
 app.get('/tienda', function(request, response){
     const coleccion = db.collection('Productos');
 
+    var prod = request.query.producto;
     coleccion.find({
-        Precio: { 
-            '$eq': 280000,
-       },
-       color:{
-           '$eq': 'Negro',
+       soy: {
+        '$eq': prod, 
        }
     }).toArray(function(err, docs){
         if(err){
@@ -97,8 +95,8 @@ app.get('/tienda', function(request, response){
             response.send(err);
             return;
         }        
-        
-        var prod = request.query.producto;
+
+
         console.log(prod);
         console.log(docs);
     
@@ -114,7 +112,7 @@ app.get('/tienda', function(request, response){
 
 //Renderizar la tienda de manera    GENERAL    (todos los productos)
 app.get('/tiendageneral', function(request,response){
-    const coleccion = db.collection('productos');
+    const coleccion = db.collection('Productos');
 
     coleccion.find({}).toArray(function(err,docs){
         if(err){
@@ -130,7 +128,7 @@ app.get('/tiendageneral', function(request,response){
 
 //renderizar la pagina de   DESCRIPCION     para el documento
 app.get('/descripcion', function(request, response){
-    const coleccion = db.collection('productos');
+    const coleccion = db.collection('Productos');
     var prod = request.query.producto;
     coleccion.find({
         Titulo:{
@@ -141,7 +139,7 @@ app.get('/descripcion', function(request, response){
             console.log(err);
             response.send(err);
             return;
-        } 
+        }
 
         var contexto = {producto: docs};
             response.render('descripcion', contexto);
@@ -164,11 +162,15 @@ app.get('/checkOut', function(request, response){
     });
 });
 
+app.get('/interaccion', function (request, response) {
+    response.render('interaccion');
+});
+
 //////////////////////////////////////////////////////RUTAS POST
 
 //Agregar item al carrito
 app.post('/api/AgregarAlCarrito', function(request, response){
-    const coleccion = db.collection('productos');
+    const coleccion = db.collection('Productos');
     const coleccion2 = db.collection('Carrito');
     let titulo = request.body.titulo;
 
