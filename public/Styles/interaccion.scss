@@ -1,0 +1,57 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 90%;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   // background-color: #000002;
+}
+
+.sketchHolder{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+
+.colores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+
+    div{
+
+        border: 2px solid white;
+        padding: 2%;
+        transition: 0.5s;
+
+        &:hover{
+            border: 2px solid #333333;
+        }
+
+        &:nth-child(1){
+            background-color: red;
+        }
+        &:nth-child(2){
+            background-color: green;
+        }
+        &:nth-child(3){
+            background-color: blue;
+        }
+        &:nth-child(4){
+            background-color: orange;
+        }
+        &:nth-child(5){
+            background-color: purple;
+        }
+    }
+
+}
