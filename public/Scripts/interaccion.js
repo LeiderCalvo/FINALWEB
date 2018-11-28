@@ -16,6 +16,12 @@ window.addEventListener('load', function () {
       //  console.log(message);
     });
 
+    //Llamar el carrito en el localStorage
+    var elemsCarrito = JSON.parse(localStorage.getItem('carrito'));
+    if(elemsCarrito == null){
+        elemsCarrito = [];
+    }
+
     //añade el listener a los colores pinta el objeto con la clase = pieza del color que trae como data el colorsito
     var colores = document.querySelectorAll('#colorsito');
     colores.forEach(element => {
@@ -30,15 +36,21 @@ window.addEventListener('load', function () {
     var selPieza = document.querySelectorAll('#selPieza');
     selPieza.forEach(element => {
         element.addEventListener('click', function () {
-            pieza = element.getAttribute('data-pieza');
-            movCamisa(pieza);
+            if(pieza != element.getAttribute('data-pieza')){
+                isPiezaFinal(element);
+                pieza = element.getAttribute('data-pieza');
+                movCamisa(pieza);
+                element.style.borderColor = 'white';
+            }
         })
     });
 
     //se lleva la camisa y vuelve y a trae con tweenlite
     function movCamisa(p) {
         desSelecAll();
-        document.querySelector(`.${p}`).style.stroke = 'white';
+        var tl = new TimelineLite();
+        tl.fromTo('.camisa', 1, {x:0, ease: Power1.easeOut, opacity: 0},{x:-1900, ease: Power1.easeOut, opacity: 100}).fromTo('.camisa', 1.5, {x:1200, ease: Back.easeOut.config(1.7), opacity: 0},{x:0, ease: Back.easeOut.config(1.7), opacity: 100}).to(document.querySelector(`.${p}`),2,{stroke: 'white'});
+       // document.querySelector(`.${p}`).style.stroke = 'white';
     }
 
     //restaura el valor del stroke a none para todos los elementos
@@ -46,6 +58,59 @@ window.addEventListener('load', function () {
         piezas.forEach(element => {
             document.querySelector(`.${element}`).style.stroke = 'none';
         });
+        selPieza.forEach(elem => {
+            elem.style.borderColor = '#333333';
+        });
+    }
+
+    //trae el boton si estamos en la ultima pieza
+    function isPiezaFinal(p) {
+        if(p.getAttribute('data-pieza') == 'camisa__triangulo2'){
+            var tl = new TimelineLite();
+            tl.fromTo('.boton__comprar',1,{left:-1000, opacity: 0},{left:125, opacity: 100});
+        }else{
+            var tl = new TimelineLite();
+            tl.to('.boton__comprar',1,{left: -1000, opacity: 0});
+        }
+    }
+
+    document.querySelector('.boton__comprar').addEventListener('click', function () {
+        addToCarrito(`{
+            Titulo: "PERSONALIZADO",
+            imagen: ${},
+            Precio: 300000,
+            color: ${},
+            tallas: ["s"],
+            soy: "camisetas"
+        }`);
+        window.location.href = "/checkOut";
+    });
+
+    function addToCarrito(atributo){
+        var p = elemsCarrito.find(function (element) {
+            return element == atributo;
+        });
+
+        if(p){
+            return;
+        }else{
+            elemsCarrito.push(atributo);
+            localStorage.setItem('carrito', JSON.stringify(elemsCarrito));
+            
+            fetch(`/api/AgregarAlCarrito`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `titulo=${atributo}`,
+            }).then(function(respuesta){
+                return respuesta.text();
+            }).catch(function(error){
+                console.error(error);
+            }).then(function(mensaje){
+                console.log(mensaje);
+            });
+        }
     }
 
     /*
