@@ -16,7 +16,7 @@ function draw() {
   rectMode(CENTER);
 
   if(frameCount%200==0){
-      for (let index = 0; index < random(5,15); index++) {
+      for (let index = 0; index < random(5,10); index++) {
           particulas.push(new Particle(createVector(random(width), random(height))));
       }
   }
@@ -75,7 +75,7 @@ window.onresize = function() {
   };
 
   function mousePressed() {
-      for (let index = 0; index < 60; index++) {
+      for (let index = 0; index < 20; index++) {
           particulas.push(new Particle(createVector(random(width), random(height))));
       }
   }

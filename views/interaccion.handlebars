@@ -4,25 +4,38 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Interaccion</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500|Roboto+Condensed" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Styles/interaccion.css" />
 </head>
 <body>
     <div id="sketchHolder"></div>
+
+    <h1 class="nombre">NOMBRE DE LA CAMISA</h1>
     
-    <div class="camisa">
-        <svg width="100%" height="100%">
-            <circle data-parte="camisa__circulo" class="camisa__circulo" cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
-            <polygon data-parte="camisa__triangulo" class="camisa__triangulo" points="120,0 240,225 0,225" fill="green"/>
-        </svg>
+    <div class="izq">
+        <div class="camisa">
+            <svg width="100%" height="100%">
+                <circle data-parte="camisa__circulo" class="camisa__circulo" cx="100%" cy="100%" r="150" fill="blue" stroke="white" />
+                <polygon data-parte="camisa__triangulo" class="camisa__triangulo" points="120,0 240,225 0,225" fill="green"/>
+                <circle data-parte="camisa__circulo2" class="camisa__circulo2" cx="70%" cy="80%" r="100" fill="blue" />
+                <polygon data-parte="camisa__triangulo2" class="camisa__triangulo2" points="150,0 230,265 0,205" fill="green"/>
+            </svg>
+        </div>
+        
+        <div class="colores">
+            <div id="colorsito" data-colorsito="red"></div>
+            <div id="colorsito" data-colorsito="green"></div>
+            <div id="colorsito" data-colorsito="blue"></div>
+            <div id="colorsito" data-colorsito="orange"></div>
+            <div id="colorsito" data-colorsito="purple"></div>
+        </div>
     </div>
-    
-    <div class="colores">
-        <div id="colorsito" data-colorsito="red"></div>
-        <div id="colorsito" data-colorsito="green"></div>
-        <div id="colorsito" data-colorsito="blue"></div>
-        <div id="colorsito" data-colorsito="orange"></div>
-        <div id="colorsito" data-colorsito="purple"></div>
+    <div class="der">
+        <div id="selPieza" data-pieza="camisa__circulo"></div>
+        <div id="selPieza" data-pieza="camisa__triangulo"></div>
+        <div id="selPieza" data-pieza="camisa__circulo2"></div>
+        <div id="selPieza" data-pieza="camisa__triangulo2"></div>
     </div>
 </body>
     <script src="Scripts/interaccion.js"></script>
