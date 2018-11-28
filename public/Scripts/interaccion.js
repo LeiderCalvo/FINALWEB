@@ -74,35 +74,31 @@ window.addEventListener('load', function () {
         }
     }
 
+    //Agregar el item al carrito
     document.querySelector('.boton__comprar').addEventListener('click', function () {
-        addToCarrito(`{
-            Titulo: "PERSONALIZADO",
-            imagen: ${},
-            Precio: 300000,
-            color: ${},
-            tallas: ["s"],
-            soy: "camisetas"
-        }`);
+        addToCarrito('color', 'imagen');
         window.location.href = "/checkOut";
     });
 
-    function addToCarrito(atributo){
+    function addToCarrito(color, imagen){
         var p = elemsCarrito.find(function (element) {
-            return element == atributo;
+            return element == 'PERSONALIZADO';
         });
 
         if(p){
+            console.log("ya existe personalizado en el carrito");
             return;
         }else{
-            elemsCarrito.push(atributo);
+            console.log("Agregando personalizado en el carrito");
+            elemsCarrito.push('PERSONALIZADO');
             localStorage.setItem('carrito', JSON.stringify(elemsCarrito));
             
-            fetch(`/api/AgregarAlCarrito`, {
+            fetch(`/api/AgregarAlCarritoPersonalizado`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `titulo=${atributo}`,
+                body: `color=${color}&imagen=${imagen}`,
             }).then(function(respuesta){
                 return respuesta.text();
             }).catch(function(error){

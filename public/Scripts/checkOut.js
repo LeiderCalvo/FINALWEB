@@ -13,6 +13,7 @@ window.addEventListener('load', function(){
 
     var x = document.querySelectorAll('.color');
     x.forEach(element => {
+        //console.log("actualiza el color");
         var color = element.getAttribute('data-color'); 
         switch (color) {
             case "Negro":

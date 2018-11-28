@@ -212,6 +212,23 @@ app.post('/api/AgregarAlCarrito', function(request, response){
     });
 });
 
+//Agregar item al carrito
+app.post('/api/AgregarAlCarritoPersonalizado', function(request, response){
+    const coleccion2 = db.collection('Carrito');
+    var objeto = {
+        Titulo: "PERSONALIZADO",
+        imagen: request.body.imagen,
+        Precio: 300000,
+        color: request.body.color,
+        tallas: ["s"],
+        soy: "camisetas"
+    };
+
+    coleccion2.insert(objeto);
+    console.log("insertò perosnalizado");
+    response.send("insertó");
+});
+
 //vaciar carrito
 app.post('/api/vaciarCarrito', function(request, response){
     const coleccion = db.collection('Carrito');

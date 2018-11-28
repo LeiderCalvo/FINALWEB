@@ -29,7 +29,6 @@ window.addEventListener('load', function(){
         });
     }
 
-
     var ts= document.querySelectorAll(".talla");
     ts.forEach(function(elem){
         elem.addEventListener('click', function(){
@@ -37,4 +36,29 @@ window.addEventListener('load', function(){
                 window.location.href = `/tiendaTalla/?producto=${tit}&talla=${elem.innerText}`;
         });
     });
+
+    ///Arrancar con tweenLites
+
+    var tall = new TimelineLite();
+    tall.add(TweenLite.from(document.querySelector('.filtros__talla'),2,{y: -205, opacity: 0, ease: Back.easeOut.config(1)}));
+    tall.add(TweenLite.from(document.querySelector('header'),0.7,{y: -205, opacity: 0}));
+    tall.add(TweenLite.from(document.querySelector('.verMas'),0.7,{y: 205, opacity: 0}));
+    tall.add(TweenLite.from(document.querySelector('footer'),0.7,{y: 205, opacity: 0}));
+
+    var tl = new TimelineLite();
+    tl.delay(0.2);
+    tl.add(TweenLite.from(document.querySelector('.titulo'),2,{y: -205, opacity: 0, ease: Back.easeOut.config(1)}));
+    tl.add(TweenLite.fromTo(document.querySelector('.flotante'),0.3,{x: 50, opacity: 0}, {x: 0, opacity: 100}));
+
+    var tp = new TimelineLite();
+    tp.delay(1.5);
+    var prods = document.querySelectorAll('.productos');
+
+    for (let index = 0; index < prods.length; index++) {
+        const element = prods[index];
+        tp.add(TweenLite.fromTo(element,0.2, {opacity:0, x: function () {
+            return -50;   
+        }}, {opacity: 100, x:0}));
+    }
+    //tl.delay(1);
 });
