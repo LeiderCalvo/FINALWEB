@@ -14,6 +14,11 @@ window.addEventListener('load', function () {
       //  console.log(message);
     });
 
+    document.querySelector('.camisa_circulo').addEventListener('click', function () {
+        console.log("si entra");
+        document.querySelector('.camisa_circulo').style.fill = 'red';
+    });
+    
     /* intento de mover imagenes
      var el = document.querySelector('img').getBoundingClientRect;
             console.log(el);
