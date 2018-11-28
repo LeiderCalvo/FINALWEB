@@ -21,8 +21,9 @@ body{
 }
 
 .camisa{
+    margin-top: 9%;
     height: 50%;
-    width: 100%;
+    width: 70%;
 }
 
 .colores{
@@ -30,6 +31,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     width: 40%;
+    margin: 5% 0;
 
     div{
 

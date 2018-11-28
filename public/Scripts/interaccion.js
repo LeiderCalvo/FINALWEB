@@ -5,6 +5,7 @@ window.addEventListener('load', function () {
         https://greensock.com/ease-visualizer
     */
     var mousePos;
+    var pieza = 'camisa__circulo';
     document.querySelector('html').addEventListener('mousemove', function (evt) {
         mousePos = {
             x: evt.clientX,
@@ -14,11 +15,25 @@ window.addEventListener('load', function () {
       //  console.log(message);
     });
 
-    document.querySelector('.camisa_circulo').addEventListener('click', function () {
-        console.log("si entra");
-        document.querySelector('.camisa_circulo').style.fill = 'red';
+    var colores = document.querySelectorAll('#colorsito');
+    colores.forEach(element => {
+        element.addEventListener('click', function () {
+            var string  = element.getAttribute('data-colorsito');
+           // console.log(string);
+            document.querySelector(`.${pieza}`).style.fill = string;
+        });
     });
-    
+
+    document.querySelector('.camisa__circulo').addEventListener('click', function () {
+        //console.log("si entra");
+        pieza = document.querySelector('.camisa__circulo').getAttribute('data-parte');
+    });
+
+    document.querySelector('.camisa__triangulo').addEventListener('click', function () {
+       // console.log("si entra");
+        pieza = document.querySelector('.camisa__triangulo').getAttribute('data-parte');
+    });
+
     /* intento de mover imagenes
      var el = document.querySelector('img').getBoundingClientRect;
             console.log(el);
