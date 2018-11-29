@@ -40,9 +40,14 @@ app.set('view engine','handlebars');
 
 //LLAMADO DE LAS RUTAS//////////////////////////////////////////////////////////////////////
 
-//renderizar el template de la pagina   INICIAL T1
+//renderizar el template de eleccion de la pagina   INICIAL T1
 app.get('/', function(request, response){
-        response.render('inicio');
+        response.render('elegir');
+});
+
+//renderizar el template landing T1
+app.get('/inicio', function(request, response){
+    response.render('inicio');
 });
 
 //filtro de talla

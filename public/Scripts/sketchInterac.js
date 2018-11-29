@@ -63,6 +63,7 @@ function centerCanvas() {
     var x = (window.innerWidth - width) / 2;
     var y = (window.innerHeight - height) / 2;
     canvas.position(x, y);
+    noCursor();
   }
 
 window.onresize = function() {
