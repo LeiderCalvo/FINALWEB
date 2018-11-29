@@ -11,13 +11,30 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json());
 
-const url = 'mongodb://localhost:27017';
+/*const url = 'mongodb://localhost:27017';
 const dbName = 'Tienda';
 const client = new MongoClient(url);
 var db = null;
+*/
 
 
+MongoClient.connect('mongodb+srv://leidercalvo:<PASSWORD>@cluster0-erfvb.mongodb.net/tienda?retryWrites=true',
+{
+    auth: {
+        user: 'leidercalvo',
+        password: 'no.me.apartare805462862'
+    }
+},
+function (err, client) {
+    if(err) throw err;
 
+    db.client.db('tienda');
+
+    app.listen(process.env.PORT || 1234);
+}
+);
+
+/*
 //codigo para conectarnos con el cliente que acabamos de crear  
 client.connect(function(err){
     if(err){
@@ -27,7 +44,7 @@ client.connect(function(err){
   
     db = client.db(dbName);
 });
-
+*/
 
 // para defnir la carpeta publica
 app.use(express.static('public'));
