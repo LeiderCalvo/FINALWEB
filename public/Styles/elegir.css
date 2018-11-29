@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.elegir {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.elegir div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-weight: 800;
+  width: 50%;
+  height: 100%;
+}
+
+.elegir div h1 {
+  margin-bottom: 10%;
+}
+
+.elegir__men {
+  color: white;
+  background-image: url(/imgs/previas/eleg_man.jpg);
+}
+
+.elegir__woman {
+  color: white;
+  background-position: right;
+  background-image: url(/imgs/previas/eleg_woman.jpg);
+}
+/*# sourceMappingURL=elegir.css.map */
