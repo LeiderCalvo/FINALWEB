@@ -6,56 +6,63 @@
         imagen: "/imgs/camisetas/giordana.png",
         Precio: 280000,
         color: "Negro",
-        tallas: ["xs", "s", "m"],
-        soy: "camisetas"
+        talla: "M",
+        soy: "camisetas",
+        descripcion: "La mejor opción para un día soleado"
     },
     {
         Titulo: "CONFUSION",
         imagen: "/imgs/camisetas/confusion.png",
         Precio: 100000,
         color: "Negro",
-        tallas: ["xs", "s", "m", "l", "xl"],
-        soy: "camisetas"
+        talla: "S",
+        soy: "camisetas",
+        descripcion: "Tela de la más alta calidad para brindarte mayor comodidad"
     },
     {
         Titulo: "TIME",
         imagen: "/imgs/camisetas/time.png",
         Precio: 300000,
         color: "Verde",
-        tallas: ["m", "l", "xl"],
-        soy: "camisetas"
+        talla: "L",
+        soy: "camisetas",
+        descripcion: "TIME es perfecta para una noche con amigos"
     },
     {
         Titulo: "ROBIN",
         imagen: "/imgs/camisetas/robin.png",
         Precio: 200000,
         color: "Blanco",
-        tallas: ["s", "m", "l"],
-        soy: "camisetas"
+        talla: "XS",
+        soy: "camisetas",
+        descripcion: "Siéntete como un héroe"
     },
     {
         Titulo: "PARTS",
         imagen: "/imgs/camisetas/parts.png",
         Precio: 400000,
         color: "Gris",
-        tallas: ["s", "m", "l"],
-        soy: "camisetas"
+        talla: "M",
+        soy: "camisetas",
+        descripcion: "Usalá para toda ocasión"
     },
     {
         Titulo: "STRONG",
         imagen: "/imgs/camisetas/Strong.png",
         Precio: 190000,
         color: "Blanco",
-        tallas: ["xs", "s", "m"],
-        soy: "camisetas"
+        talla: "S",
+        soy: "camisetas",
+        descripcion: "En un día de invierno STRONG será tu mejor compañera"
     },
     {
         Titulo: "PULL",
         imagen: "/imgs/camisetas/pull.png",
         Precio: 340000,
         color: "Rosado",
-        tallas: ["xs", "s"],
-        soy: "camisetas"
+        talla: "L",
+        soy: "camisetas",
+        descripcion: "Nadie podrá resistirse"
     },
 ]
 
@@ -67,7 +74,8 @@
         Precio: 280000,
         color: "Negro",
         soy: "pantalones",
-        tallas: ["xs", "s", "m"]
+        talla: "M",
+        descripcion: "Pantalón skinny con cinco bolsillos. Cierre frontal con cremallera y botón."
     },
     {
         Titulo: "ALECBENNETT",
@@ -75,7 +83,8 @@
         Precio: 500000,
         color: "Cafe",
         soy: "pantalones",
-        tallas: [ "s", "m", "l"]
+        talla: "L",
+        descripcion: "Pantalón jogger de cintura elástica regulable con cordón. Bandas laterales combinadas a contraste. Bolsillos frontales y detalle de bolsillos de vivo en espalda."
     },
     {
         Titulo: "CSBL",
@@ -83,7 +92,8 @@
         Precio: 320000,
         color: "Negro",
         soy: "pantalones",
-        tallas: ["xs", "s", "m"]
+        talla: "S",
+        descripcion: "Pantalón skinny con bolsillos frontales y detalle de bolsillos traseros con solapa. Cierre frontal con cremallera y botón."
     },
     {
         Titulo: "JORDAN",
@@ -91,7 +101,8 @@
         Precio: 250000,
         color: "Negro",
         soy: "pantalones",
-        tallas: ["xs", "s"]
+        talla: "L",
+        descripcion: "Pantalón cargo con detalle de pliegues en rodilla. Dos bolsillos laterales, dos en pernera con botones y dos en la parte posterior."
     },
     {
         Titulo: "LOUISE",
@@ -99,7 +110,8 @@
         Precio: 340000,
         color: "Gris",
         soy: "pantalones",
-        tallas: ["xs", "s", "m", "l"]
+        talla: "S",
+        descripcion: "Pantalón amplio de fit relajado con detalle de pliegues frontales. Bolsillos em delantero y de vivo en espalda."
     },
     {
         Titulo: "NEW",
@@ -107,7 +119,8 @@
         Precio: 420000,
         color: "Gris",
         soy: "pantalones",
-        tallas: ["s", "m", "l", "xl"]
+        talla: "M",
+        descripcion: "Pantalón de fit skinny con cinco bolsillos. Cierre frontal con cremallera y botón."
     },
     {
         Titulo: "SKINNY",
@@ -115,7 +128,8 @@
         Precio: 220000,
         color: "Negro",
         soy: "pantalones",
-        tallas: ["xs", "s", "m", "l", "xl"]
+        talla: "L",
+        descripcion: "Pantalón slim fit con detalle de llavero combinado en cintura. Bolsillos frontales y detalle de bolsillos de vivo en espalda."
     },
     {
         Titulo: "TUSHAR",
@@ -123,7 +137,8 @@
         Precio: 250000,
         color: "Gris",
         soy: "pantalones",
-        tallas: ["s", "m", "xl"]
+        talla: "M",
+        descripcion: "Pantalón tipo chino con estampado de cuadros y llavero decorativo. Cierre con botón y cremallera"
     },
     {
         Titulo: "WOLF",
@@ -131,7 +146,8 @@
         Precio: 370000,
         color: "Negro",
         soy: "pantalones",
-        tallas: ["xs", "l", "xl"]
+        talla: "S",
+        descripcion: "Pantalón satinado cintura elástica, bolsillos en delantero y detalle vivo lateral."
     }
 ]
 
@@ -143,7 +159,8 @@
         Precio: 360000,
         color: "Blanco",
         soy: "camisas",
-        tallas: ["m", "l", "xl"]
+        talla: "S",
+        descripcion: "Camisa de cuadros de manga larga. Slim fit. Cuello con botones."
     },
     {
         Titulo: "BLAISE",
@@ -151,7 +168,8 @@
         Precio: 450000,
         color: "Blanco",
         soy: "camisas",
-        tallas: ["l", "xl"]
+        talla: "M",
+        descripcion: "Camisa relaxed fit de franela con cuello solapa y manga larga acabada en puño con botón. Cierre frontal con botones."
     },
     {
         Titulo: "HOUSTON",
@@ -159,7 +177,8 @@
         Precio: 380000,
         color: "Negro",
         soy: "camisas",
-        tallas: ["xs", "s", "m"]
+        talla: "L",
+        descripcion: "Camisa regular fit de cuello solapa y manga larga acabada en puño con botones. Cierre frontal con botones."
     },
     {
         Titulo: "J1",
@@ -167,7 +186,8 @@
         Precio: 270000,
         color: "Blanco",
         soy: "camisas",
-        tallas: ["s", "m", "l"]
+        talla: "M",
+        descripcion: "Camisa elástica de popelín con corte superslim. Modelo de cuello clásico y manga larga con cierre frontal abotonado."
     },
     {
         Titulo: "LEXTHA",
@@ -175,7 +195,8 @@
         Precio: 480000,
         color: "Blanco",
         soy: "camisas",
-        tallas: ["xs", "s", "m"]
+        talla: "S",
+        descripcion: "Camisa de rayas elástica con corte superslim. Modelo de cuello clásico y manga larga. Puños y cierre frontal abotonados."
     },
     {
         Titulo: "REDODN",
@@ -183,7 +204,8 @@
         Precio: 340000,
         color: "Blanco",
         soy: "camisas",
-        tallas: ["xs", "s", "m", "l"]
+        talla: "XS",
+        descripcion: "Camisa lisa slim fit de cuello con botones y manga larga acabada en puño con botones. Cierre frontal con botonadura."
     },
     {
         Titulo: "REYHA",
@@ -191,7 +213,8 @@
         Precio: 430000,
         color: "Azul",
         soy: "camisas",
-        tallas: ["s", "m", "l", "xl"]
+        talla: "XS",
+        descripcion: "Camisa lisa slim fit de cuello con botones y manga larga acabada en puño con botones. Cierre frontal con botonadura."
     },
     {
         Titulo: "WAQAS",
@@ -199,7 +222,8 @@
         Precio: 500000,
         color: "Cafe",
         soy: "camisas",
-        tallas: ["m", "l", "xl"]
+        talla: "M",
+        descripcion: "Camisa regular fit con cuello clásico y manga larga. Dos bolsillos frontales a la altura del pecho con solapa y botón."
     },
     {
         Titulo: "WEAVER",
@@ -207,6 +231,7 @@
         Precio: 460000,
         color: "Verde",
         soy: "camisas",
-        tallas: ["xs", "s", "m", "l", "xl"]
+        talla: "L",
+        descripcion: "Camisa relaxed fit modelo con capucha con cordones ajustables y manga larga. Puños y cierre frontal con botones."
     }
 ]

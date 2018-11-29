@@ -120,6 +120,25 @@ window.addEventListener('load', function () {
         }
     }
 
+    //Inicio animado con greesock
+    var tl = new TimelineLite();
+    tl.add(TweenLite.from(document.querySelector('.colores'),1.3, {y:800, opacity:0,  ease: Back.easeOut.config(1)}));
+
+    var t = new TimelineLite();
+    t.add(TweenLite.from(document.querySelector('.nombre'),1.3, {x:-900, opacity:0,  ease: Back.easeOut.config(1)}));
+
+    var z = new TimelineLite();
+    z.add(TweenLite.from(document.querySelector('.camb'),1.3, {opacity:0}));
+
+    var ps = document.querySelectorAll('#selPieza');
+    var p = new TimelineLite();
+    ps.forEach(element => {
+        p.add(TweenLite.from(element,0.4, {y:-50, opacity:0,  ease: Back.easeOut.config(1)}));
+    });
+
+    var q = new TimelineLite();
+    q.fromTo('.camisa', 1.5, {x:1200, ease: Back.easeOut.config(1.7), opacity: 0},{x:0, ease: Back.easeOut.config(1.7), opacity: 100}).to(document.querySelector(`.${p}`),2,{stroke: 'white'});
+
     /*
     seleccionar el eleento para cambiarle el color 
     document.querySelector('.camisa__circulo').addEventListener('click', function () {
