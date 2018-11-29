@@ -17,18 +17,18 @@ const client = new MongoClient(url);
 var db = null;
 */
 
-
-MongoClient.connect('mongodb+srv://leidercalvo:<PASSWORD>@cluster0-erfvb.mongodb.net/tienda?retryWrites=true',
+// por si acaso no funciona ?retryWrites=true
+MongoClient.connect('mongodb+srv://cluster0-erfvb.mongodb.net/tienda',
 {
     auth: {
         user: 'leidercalvo',
         password: 'no.me.apartare805462862'
     }
 },
-function (err, client) {
+function (err, clien) {
     if(err) throw err;
 
-    db.client.db('tienda');
+    db = clien.db('tienda');
 
     app.listen(process.env.PORT || 1234);
 }
