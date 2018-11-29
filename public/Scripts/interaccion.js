@@ -5,8 +5,8 @@ window.addEventListener('load', function () {
         https://greensock.com/ease-visualizer
     */
     var mousePos;
-    var piezas = ['camisa__circulo', 'camisa__triangulo', 'camisa__circulo2', 'camisa__triangulo2']
-    var pieza = 'camisa__circulo';
+    var piezas = ['camisa__cuello', 'camisa__pecho', 'camisa__espalda', 'camisa__manga1', 'camisa__manga2']
+    var pieza = 'camisa__pecho';
     document.querySelector('html').addEventListener('mousemove', function (evt) {
         mousePos = {
             x: evt.clientX,
@@ -27,6 +27,11 @@ window.addEventListener('load', function () {
     colores.forEach(element => {
         element.addEventListener('click', function () {
             var string  = element.getAttribute('data-colorsito');
+           if(pieza == 'camisa__mangas'){
+                document.querySelector(`.camisa__manga1`).style.fill = string;
+                document.querySelector(`.camisa__manga2`).style.fill = string;    
+                return;
+            }
             document.querySelector(`.${pieza}`).style.fill = string;
         });
     });
@@ -49,6 +54,10 @@ window.addEventListener('load', function () {
     function movCamisa(p) {
         desSelecAll();
         var tl = new TimelineLite();
+       if(pieza == 'camisa__mangas'){
+            tl.fromTo('.camisa', 1, {x:0, ease: Power1.easeOut, opacity: 0},{x:-1900, ease: Power1.easeOut, opacity: 100}).fromTo('.camisa', 1.5, {x:1200, ease: Back.easeOut.config(1.7), opacity: 0},{x:0, ease: Back.easeOut.config(1.7), opacity: 100}).to(document.querySelector(`.camisa__manga1`),2,{stroke: 'white'}).to(document.querySelector(`.camisa__manga2`),2,{stroke: 'white'});
+            return;
+        }
         tl.fromTo('.camisa', 1, {x:0, ease: Power1.easeOut, opacity: 0},{x:-1900, ease: Power1.easeOut, opacity: 100}).fromTo('.camisa', 1.5, {x:1200, ease: Back.easeOut.config(1.7), opacity: 0},{x:0, ease: Back.easeOut.config(1.7), opacity: 100}).to(document.querySelector(`.${p}`),2,{stroke: 'white'});
        // document.querySelector(`.${p}`).style.stroke = 'white';
     }
@@ -65,7 +74,7 @@ window.addEventListener('load', function () {
 
     //trae el boton si estamos en la ultima pieza
     function isPiezaFinal(p) {
-        if(p.getAttribute('data-pieza') == 'camisa__triangulo2'){
+        if(p.getAttribute('data-pieza') == 'camisa__espalda'){
             var tl = new TimelineLite();
             tl.fromTo('.boton__comprar',1,{left:-1000, opacity: 0},{left:125, opacity: 100});
         }else{
