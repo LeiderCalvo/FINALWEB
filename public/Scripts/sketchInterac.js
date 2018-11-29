@@ -1,6 +1,7 @@
 var system;
 var canvas;
 var particulas = [];
+var img;
 
 function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight);
@@ -9,16 +10,18 @@ function setup() {
     canvas.style('z-index', '-2');
     centerCanvas();
     particulas.push(new Particle(createVector(random(width), random(height))));
+    img = loadImage("/imgs/fondo.jpg");
 }
 
 function draw() {
-  background(51);
+  //background(226,226,228);
+  image(img, 0, 0);
   rectMode(CENTER);
 
-  if(frameCount%200==0){
-      for (let index = 0; index < random(5,10); index++) {
+  if(frameCount%70==0){
+     // for (let index = 0; index < random(3,7); index++) {
           particulas.push(new Particle(createVector(random(width), random(height))));
-      }
+   //   }
   }
 
   for (var i = particulas.length-1; i >= 0; i--) {
@@ -37,6 +40,7 @@ var Particle = function(pos) {
   this.vel = createVector(random(-1, 1), random(-1, 0));
   this.pos = pos.copy();
   this.vida = 255;
+  this.ran = random(100,153);
 };
 
 //mover particula
@@ -48,10 +52,12 @@ Particle.prototype.mover = function(){
 
 //pintar particula
 Particle.prototype.pintar = function() {
-  stroke(200, this.vida);
-  strokeWeight(2);
-  fill(127, this.vida);
+  //stroke(200, this.vida);
+  //strokeWeight(2);
+  noStroke();
+  fill(this.ran,this.ran,this.ran, this.vida);
   rect(this.pos.x, this.pos.y, 12, 12);
+  //ellipse(this.pos.x, this.pos.y, 12, 12);
 };
 
 // get muerto
@@ -76,7 +82,7 @@ window.onresize = function() {
   };
 
   function mousePressed() {
-      for (let index = 0; index < 20; index++) {
+      for (let index = 0; index < 10; index++) {
           particulas.push(new Particle(createVector(random(width), random(height))));
       }
   }

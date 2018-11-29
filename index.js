@@ -62,8 +62,8 @@ app.get(`/tiendaTalla`, function(request, response){
                     soy: { 
                          '$eq': tit.toLowerCase(),
                     },
-                    tallas:{
-                        '$in': [talla],
+                    talla:{
+                        '$eq': talla,
                     }
     }).toArray(function(err, docs){
         if(err){

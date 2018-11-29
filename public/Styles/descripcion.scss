@@ -70,10 +70,10 @@ body{
     .camisetas{
         width: 100%;
         margin-left: 2%;
-        background-color: black;
+        background-image: url('/imgs/promo.jpg');
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
+        background-size: cover;
+        background-position: right;
     }
 }
 //titulo o nombre del producto

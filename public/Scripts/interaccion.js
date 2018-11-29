@@ -38,6 +38,7 @@ window.addEventListener('load', function () {
 
     //toma los selectores de piezas de la derecha y les añade el listener para poner en la var pieza el string correspondiente a la clase 
     //del objeto a cambiar 
+    var cambio = document.querySelector('.cambio');
     var selPieza = document.querySelectorAll('#selPieza');
     selPieza.forEach(element => {
         element.addEventListener('click', function () {
@@ -46,6 +47,7 @@ window.addEventListener('load', function () {
                 pieza = element.getAttribute('data-pieza');
                 movCamisa(pieza);
                 element.style.borderColor = 'white';
+                cambio.innerText = element.getAttribute('data-ti');
             }
         })
     });
@@ -76,7 +78,7 @@ window.addEventListener('load', function () {
     function isPiezaFinal(p) {
         if(p.getAttribute('data-pieza') == 'camisa__espalda'){
             var tl = new TimelineLite();
-            tl.fromTo('.boton__comprar',1,{left:-1000, opacity: 0},{left:125, opacity: 100});
+            tl.fromTo('.boton__comprar',1,{left:-1000, opacity: 0},{left:70, opacity: 1});
         }else{
             var tl = new TimelineLite();
             tl.to('.boton__comprar',1,{left: -1000, opacity: 0});
