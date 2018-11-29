@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
                 isPiezaFinal(element);
                 pieza = element.getAttribute('data-pieza');
                 movCamisa(pieza);
-                element.style.borderColor = 'white';
+                element.style.borderColor = 'black';
                 cambio.innerText = element.getAttribute('data-ti');
             }
         })

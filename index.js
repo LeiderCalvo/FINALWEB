@@ -85,6 +85,41 @@ app.get(`/tiendaTalla`, function(request, response){
     }); 
 });
 
+//filtro de talla
+app.get(`/tiendaColor`, function(request, response){
+    const coleccion = db.collection('Productos');
+    let tit = request.query.producto;
+    let color = request.query.color;
+    //tit.toLowerCase(tit);
+    console.log(tit);
+    console.log(color);
+    coleccion.find({
+                    soy: { 
+                         '$eq': tit.toLowerCase(),
+                    },
+                    color:{
+                        '$eq': color,
+                    }
+    }).toArray(function(err, docs){
+        if(err){
+            console.error(err);
+            response.send(err);
+            return;
+        }         
+        
+        var prod = request.query.producto;
+        console.log(prod);
+    
+        var contexto = {
+            titulo: prod.toUpperCase(),
+            productos: docs,
+        };
+        
+        response.render('home', contexto);
+        
+    }); 
+});
+
 //renderizar la pagina de la    TIENDA DEPENDIENDO   si es camisa, camiseta o pantalon
 app.get('/tienda', function(request, response){
     const coleccion = db.collection('Productos');

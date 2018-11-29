@@ -154,29 +154,33 @@ body {
     z-index: 2;
 
     div {
-        height: 10%;
+        height: 14%;
         width: 100%;
         margin-bottom: 60%;
         border: 2px solid none;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         &:hover {
-            border: 2px solid gray;
+            height: 13%;
+            width: 98%;
+            border: 1px solid white;
         }
 
         &:nth-child(1) {
-            background-color: red;
+            background-image: url("/imgs/pecho.png");
         }
 
         &:nth-child(2) {
-            background-color: green;
+            background-image: url("/imgs/mangas.png");
         }
 
         &:nth-child(3) {
-            background-color: blue;
+            background-image: url("/imgs/cuello.png");
         }
 
         &:nth-child(4) {
-            background-color: orange;
+            background-image: url("/imgs/Espalda.png");
         }
     }
 }
