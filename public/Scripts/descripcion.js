@@ -76,11 +76,11 @@ window.addEventListener('load', function(){
     
     var sex = new TimelineLite();
     sex.delay(0.9);
-    sex.add(TweenLite.from(document.querySelector('.btn__volver'),0.7,{x: 205, opacity: 0, ease: Back.easeOut.config(1.8)}));
+    sex.add(TweenLite.from(document.querySelector('.btn__AgregarYvolver'),0.7,{x: 205, opacity: 0, ease: Back.easeOut.config(1.8)}));
 
     var sep = new TimelineLite();
     sep.delay(0.9);
-    sep.add(TweenLite.from(document.querySelector('.btn__AgregarYvolver'),0.7,{x: -205, opacity: 0, ease: Back.easeOut.config(1.8)}));
+    sep.add(TweenLite.from(document.querySelector('.btn__volver'),0.7,{x: -205, opacity: 0, ease: Back.easeOut.config(1.8)}));
     //tall.add(TweenLite.from(document.querySelector('.verMas'),0.7,{y: 205, opacity: 0}));
     //tall.add(TweenLite.from(document.querySelector('footer'),0.7,{y: 205, opacity: 0}));
 });

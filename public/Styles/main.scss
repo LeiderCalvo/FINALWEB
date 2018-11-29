@@ -227,10 +227,13 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 
     .talla{
         background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: white;
         border: 1px solid white;
         padding: 1%;
