@@ -60,5 +60,4 @@ window.addEventListener('load', function(){
             return -50;   
         }}, {opacity: 100, x:0}));
     }
-    //tl.delay(1);
 });

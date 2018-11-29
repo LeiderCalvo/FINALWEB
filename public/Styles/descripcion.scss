@@ -20,6 +20,7 @@ body{
     height: 100%;
     flex-wrap: wrap;
     flex-direction: column;
+    overflow: hidden;
 }
 .cuerpo{
     width: 80%;
@@ -54,7 +55,7 @@ body{
         background-image: url('/imgs/promos.png');
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
+        background-position: right;
     }
 
     .pantalones{
@@ -63,7 +64,7 @@ body{
         background-image: url('/imgs/promos.png');
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
+        background-position: right;
     }
 
     .camisetas{
